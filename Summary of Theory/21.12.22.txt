@@ -1,0 +1,79 @@
+<input type="text">
+```
+속성값
+    1.name : 입력값의 이름을 지정***
+    2. placeholder : 입력창 기본 텍스트:미리보기 텍스트
+    3. autofocus : 자동 커서 설정
+    4. maxlength : 글자수 제한
+    5. value : 기본 값 지정
+    6. readonly : 읽기 전용을 지정
+```
+<input type="password"// "radio","checkbox"- name/value 필수// >
+<select> 태그 - name/value 필수
+```
+      <!-- 색 지정시  --><input type="color" /> <br />
+      <!-- 숫자 입력 및 조정 --><input type="number" /> <br />
+      <!-- 범위 입력 --><input type="range" /> <br />
+      <!-- 날짜 입력 --><input type="date" /><br />
+
+      <!-- 제출 -->
+      <input type="submit" value="보내기" />
+      <!-- 초기화 버튼 -->
+      <input type="reset" value="다시작성" />
+```
+
+3시10분 6교시
+폼실습
+```
+  <form action="#" method="get">
+      <table width="400px">
+        <tr bgcolor="gray" height="50px">
+          <th align="left" colspan="2">Step 1: 아이디/비번 입력</th>
+        </tr>
+        
+        <tr height="35px" bgcolor="whitesmoke">
+          <td align="right">아이디</td>
+          <td align="left"><input type="text" name="아이디"/></td>
+        </tr>
+        <tr height="35px" bgcolor="whitesmoke">
+          <td align="right">비밀번호</td>
+          <td align="left"><input type="password" name="pw"/></td>
+        </tr>
+        <tr height="35px" bgcolor="whitesmoke">
+          <td align="right">비밀번호 확인</td>
+          <td align="left"><input type="password" name="pwchk"/></td>
+        </tr>
+      </table>
+    </form>
+```
+
+실습2 
+<textarea></textarea>
+
+---
+-css : Cascading Style Sheets
+
+-html에서 디자인 기능을 분할하여, 유지보수와 재사용 성을 높임
+
+-디자인은 무엇을 어떻게 할 것인지 정해야 함.
+1. html 구조 만들기 2. css 입히기 3. 기능 구현하기
+
+-선택자 - 선언
+```
+h1{
+    color:red;
+}
+```
+
+---
+<font 속성>
+-font-family: 글꼴( 1순위 나눔고딕, 2순위 굴림, 3순위 돋음)
+-font-size : 글자 크기( px(고정 크기), em, rem 뒤 두 개는 상대적 크기)
+-font-weight : 글자 두께 bold, 100 ~900
+-font-style : 글자 스타일 (italic)
+
+<선택자>
+전체 선택자 * 
+태그 선택자 태그이름 
+- 클래스 선택자 : . 기호로 표시되며 특정한 요소 선택 ( 공통된 스타일 적용할 경우)
+- 아이디 선텍자 : # 기호로 표시되며 특정한 요소 선택  (html 구조 공간 분할)

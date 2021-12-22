@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        /* 1.전체 선택자 */
+        color: green;
+        background: rgb(49, 61, 61);
+        
+      }
+      /* 아래로 갈 수록 힘이 셈 */
+      /* 2.태그 선택자 */
+      p {
+        color: skyblue;
+      }
+      li {
+        color: yellow;
+        background: rgb(221, 179, 240);
+        
+      }
+      /* 선택자를 구분해서 지정해줘야 하는 경우 : 아이디 선택자(중복x), 클래스 선택자(중복o) */
+
+      /* 3. 클래스 선택자-> .클래스 이름 
+      공통되는 스타일을 적용할 때 사용한다.*/
+
+      .food {
+        color: black;
+      }
+      #salmon {
+        color: red;
+      }
+      /* 4. 클래스 선택자-> # 아이디 이름 */
+    </style>
+  </head>
+  <body>
+    <h1>css</h1>
+    <p>웹페이지를 꾸며주는 스타일 시트 언어</p>
+    <ul>
+      <li>css 기본구조</li>
+      <li>css 스타일</li>
+      <li>css 선택자</li>
+    </ul>
+
+    <h1 class="food" id="title">이번주에 뭐 먹지?</h1>
+    <ul>
+      <li class="food" id="salmon">연어</li>
+      <li class="food" id="tuna">참치</li>
+      <li class="food" id="salad">샐러드</li>
+    </ul>
+  </body>
+</html>

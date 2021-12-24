@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .answer {
+        display: none;
+      }
+      .question:hover + .answer {
+        display: inline;
+        color: blue;
+      }
+
+      .url {
+        display: none;
+      }
+      .link:hover + .url {
+        display: inline;
+        color: blue;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <span class="question">Q. 오늘은 무슨 요일 인가요?</span>
+    <span class="answer">A. 목요일 입니다</span>
+    <br /><br />
+
+    <span class="question">Q. 내가 좋아하는 커피 메뉴는?</span>
+    <span class="answer">A. 따뜻한 아메리카노요</span>
+    <br /><br />
+
+    <a class="link" href="https://www.naver.com">네이버</a>
+    <p class="url">
+        <br/>
+        "https://www.naver.com"</p>
+    <br/>
+    <a class="link" href="https://www.daum.net">다음</a>
+
+    <span class="url">"https://www.daum.net"</span>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;   /*콘텐츠 값*/
+            height: 500px;
+            margin: 20px;
+            padding: 20px;
+            border: 20px solid gray;
+        }
+
+        .cb{
+            /* 안 적어도 됨 기본값 */
+            /* border-radius %로 사용 */
+            box-sizing: content-box;
+            border-bottom-right-radius: 50% ;
+            
+        }
+        .bb{
+            /* 안 적어도 됨 기본값 */
+            box-sizing: border-box;
+            border-style: dashed;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- box - sizing
+        요소의 크기를 화면에 표시하는 방식
+    1) content-box : content 영역만을 기준으로 한다. (기본값)
+    2) border-box : content + padding + border 까지 (border 두께 두꺼워지면 내부 작아짐)-->
+
+    <div class="cb">
+        <p>
+            contenet-box
+        </p>
+    </div>
+    <br/>
+    
+    <div class="bb">
+        <p>
+            border-box
+        </p>
+    </div>
+</body>
+</html>

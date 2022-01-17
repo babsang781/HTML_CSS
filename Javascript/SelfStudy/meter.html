@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="num"></meter><br>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value=num></meter><br>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="65"></meter><br>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value=50></meter><br>
+
+
+    <script>
+        
+        var input = Number(prompt("오늘 미세먼지 값?",""));
+        var num = (1*Number(input));
+        document.write("<meter min='0' max='100' low='20' high='65' optimum='15' value=num></meter><br>");
+        console.log(num);
+    </script>
+
+</body>
+</html>

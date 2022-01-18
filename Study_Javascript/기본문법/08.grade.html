@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var java = Number(prompt("java 점수 >>",""));
+      var andr = Number(prompt("android 점수 >>",""));
+      var web = Number(prompt("web 점수 >>",""));
+      var mean = parseInt((java+andr+web)/3); // 정수형태 결과값 출력
+      var grade;
+      if (mean>=90){
+          grade= "A";
+      }else if(mean >=80){
+          grade= "B";
+      }else if(mean >=70){
+          grade= "C";
+      }else{
+          grade= "F"
+      }
+      console.log("당신의 점수 평균은 >"+ mean +" 이고, 학점은 "+ grade +"입니다.")
+    </script>
+  </body>
+</html>

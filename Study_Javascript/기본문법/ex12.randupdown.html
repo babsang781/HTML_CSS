@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 랜덤 수 만들기 Math.random() -->> 0~1 사이의 값을 랜덤
+
+      let num = Math.random();
+      console.log(parseInt(num * 10) + 1);
+
+      // 업다운 예제 만들기
+      //문제 만들기
+      let quizNum = parseInt(Math.random() * 10) + 1;
+      var answer = prompt("1~10 중 숫자를 맞추세요>");
+
+      // for (var i = 0; i <= 1; i++) {
+      //   if (answer > quizNum) {
+      //     console.log("더 작은 수입니다!");
+      //     i--;
+      //     answer = prompt(answer + "보다 작은 수입니다. 수를 맞추세요>>");
+      //   } else if (answer < quizNum) {
+      //     console.log("더 작은 수입니다!");
+      //     i--;
+      //     answer = prompt(answer + "보다 큰 수입니다. 수를 맞추세요>>");
+      //   } else {
+      //     console.log("정답!");
+      //   }
+      // }
+
+      while (answer != quizNum) {
+        if (answer > quizNum) {
+          console.log("더 작은 수입니다!");
+          answer = prompt("1~10 중 숫자를 맞추세요>");
+        } else if (answer < quizNum) {
+          console.log("더 작은 수입니다!");
+          answer = prompt("1~10 중 숫자를 맞추세요>");
+        }
+      }
+      if (answer == quizNum) {
+        console.log("정답!");
+      }
+    </script>
+  </body>
+</html>

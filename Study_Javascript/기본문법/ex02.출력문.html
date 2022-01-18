@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>test</p>
+    <button id="btn">click</button>
+    <script>
+      // 출력문 --> 문서(웹페이지)에 출력
+      // 이벤트를 통해서  document.write() 을 실행할 경우 웹페이지 전체가 변경됨.
+      document.write("안녕하세요");
+      //콘솔로그 출력  : 제일 많이 쓰임
+      console.log("hello");
+      // document.querySelector("#btn").addEventListener("click", function(){
+      // document.write("안녕 안녕")
+      // });
+
+      // 3. 알림창으로 출력: 실행순서가 가장 먼저 뜸: 화면전환 확인 및 통신결과 확인 주로 사용
+      alert("안녕안녕! 반가워!");
+      document.querySelector("#btn").addEventListener("click", function () {
+        alert("안녕안녕! 반가워!");
+      });
+    </script>
+  </body>
+</html>

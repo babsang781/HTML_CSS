@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr3 = ["승환", "병관", "명훈"];
+
+      // 데이터 추가
+      arr3.push("지원");
+      arr3.push("나영");
+      console.log("test" + arr3);
+
+      arr3.pop();
+      console.log(arr3);
+      //splice( 시작위치, 삭제할 원소 수, 추가할 데이터)
+      console.log(arr3.splice(1,2,"나영"));
+      console.log("end:"+arr3)
+    </script>
+  </body>
+</html>

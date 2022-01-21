@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     
+
+      let num1 = parseInt(prompt("첫번째 정수>"));
+      let num2 = parseInt(prompt("두번째 정수>"));
+      let result = addNum(num1, num2);
+      console.log("결과>", result);
+
+
+      function addNum(num1, num2) {
+        return num1 + num2;
+      }
+
+      // 함수표현식: 변수 안에 함수를 선언
+      // 함수명처럼 
+
+
+
+
+
+      // 호이스팅 때문에 선언이 끌어올려져서 오류 안남.
+console.log(text); // (선언 + 초기화 된 상태)
+text = 'Hanamon!'; // (선언 + 초기화 + 할당 된 상태)
+var text;
+console.log(text)
+foo1(); // 함수 선언문에서는 호이스팅 일어난다.
+foo2(); // 함수 표현식이라서 호이스팅 안된다.
+function foo1() {
+  console.log('Hello');
+}
+var foo2 = function() {
+  console.log('world');
+}
+
+
+    </script>
+  </body>
+</html>

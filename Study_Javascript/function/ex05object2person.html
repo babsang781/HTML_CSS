@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        age: "31",
+        name: "홍00",
+      };
+
+      person.address = "광주";
+      person.favMovies = "마블  마블  디즈니 천만";
+      person.favFood = ["김치 몬x 버거"];
+      
+      person.greeting = function () {
+        console.log("나이: " + this.age);
+        console.log(person.name, this.address, this.favFood, this.favMovies);
+      };
+
+      console.log(person.name + "님의 나이는 " + person.age);
+      console.log(person.greeting());
+    </script>
+  </body>
+</html>

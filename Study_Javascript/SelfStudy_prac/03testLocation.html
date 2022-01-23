@@ -8,21 +8,23 @@
 </head>
 <body>
     <script>
-      window.location.href="http://naver.com"; // 지정한 URL로 페이지 이동
-      window.location.href="http://daum.net"; 
+     // window.location.href="http://naver.com"; // 지정한 URL로 페이지 이동
+     // window.location.href="http://daum.net"; 
       
-        let tv = new Object();
-      tv.color = "white";
-      tv.price = 3000000;
-      tv.info = function () {
-        document.write("tv 색상: " + tv.color, "<br>");
-        document.write("tc 가격: " + this.price + "<br>");
+      // 값을 입력하는 방법 1
+      let tv = new Object();    // 1) 객체 생성
+      tv.color = "white";       //  2) 객체.하위변수(?) = "뭐라뭐라" 형태로 값 입력
+      tv.price = 3000000;       //  3) 숫자 데이터는 " " 쌍따옴표 필요 없음
+      tv.info = function () {   //  4) 객체 내에 함수도 작성 가능 
+        document.write("tv 색상: " + this.color, "<br>");      // this. 형태로 tv.info 에서 
+        document.write("tc 가격: " + this.price + "<br>");     //tv 객체의 하위변수(?) 내용을 가져옴 
       };
-
-      let car = {
-        color: "black",
+        
+      // 값을 입력하는 방법 2
+      let car = {                  // 변수를 생성하고 중괄호 { 를 열음 
+        color: "black",            // 중괄호 안에서  하위변수:값 , 의 형태로 값을 입력
         price: 5000000,
-        info: function () {
+        info: function () {        // 마찬가지 형태로 메소드 선언 가능.  
           document.write("car 색상:" + this.color, "<br>");
           document.write("car 가격:" + this.price, "<br>");
         },

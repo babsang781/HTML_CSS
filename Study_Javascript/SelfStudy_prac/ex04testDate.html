@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var today = new Date();
+      nowMonth = today.getMonth();
+      nowDate = today.getDate();
+      nowDay = today.getDay();
+
+      document.write("<h1>오늘 날짜 정보</h1>");
+      document.write("현재 월: " + nowMonth, "<br>");
+      document.write("<h4>현재 일: " + nowDate, "</h4>");
+      document.write("현재 요일: " + nowDay + "</br>");
+      //////////////////////////////////////////////////////////////////////
+      var nowYear = today.getFullYear();
+      var theDate = new Date(nowYear, 11, 31);
+      var diffDate = theDate.getTime() - today.getTime(); // 밀리초 단위의 현재 날짜
+      var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24)); // 소수점 첫쨰자리에서 무조건 올림하여 정수를 반환.
+      document.write("<h1> 올해 연말까지 남은 날짜 </h1>");
+      document.write("<h2> D-day : " + result + " 일 남았습니다.</h2>");
+
+      var theDate2 = new Date(nowYear, 3, 26);
+      var diffDate2 = theDate2.getTime() - today.getTime(); // 밀리초 단위의 현재 날짜
+      var result2 = Math.ceil(diffDate2 / (60 * 1000 * 60 * 24));
+      document.write("<h1> 빅데이터반 수료까지 남은 날짜 </h1>");
+      document.write("<h2> D-day :" + result2 + " 일 남았습니다.</h2>");
+
+      //   var worldCup = new Date(2002, 4, 31);
+      //   var theMonth = worldCup.getMonth();
+      //     (theDate = worldCup.getDate()),
+      //     (theDay = worldCup.getDay());
+
+      //   document.write("<h1>worldCup 정보</h1>");
+      //   document.write(" worldCup 몇 월: " + theMonth, "<br>");
+      //   document.write("<h4>worldCup 며칠?: " + theDate, "</h4>");
+      //   document.write("worldCup 무슨 요일: " + theDay + "</br>");
+    </script>
+  </body>
+</html>

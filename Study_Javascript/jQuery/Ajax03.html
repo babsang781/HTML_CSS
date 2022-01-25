@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>json 데이터 가져오기</h1>
+    <button>정보 가져오기</button>
+
+    <script>
+  
+      // 버튼을 클릭하면 영화진흥위원회 json 데이터 가져오기
+      $("button").on("click", function () {
+        $.ajax({
+          url: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20220101",
+          success: function (result) {
+            alert("성공");
+            console.log(result);
+            console.log("조회일자: "+result.boxOfficeResult.showRange);
+            console.log("박스오피스1위 제목: "+result.boxOfficeResult.dailyBoxOfficeList[0].movieNm);
+            console.log("누적 관객수: "+result.boxOfficeResult.dailyBoxOfficeList[0].audiAcc);
+            console.log("금일 상영횟수: "+result.boxOfficeResult.dailyBoxOfficeList[0].showCnt);
+          
+          },
+          error: function () {
+            alert("실패");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

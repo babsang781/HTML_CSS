@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    
+
+    <h1>Ajax1</h1>
+    <div>
+11
+    </div>
+    <button onclick="data()">Ajax2데이터 가져오기</button>
+
+    <script>
+        let data = function(){
+            //
+
+            $.ajax({
+                url:"Ajax02.html",
+                success: function(result){  // result: 통신이 성공했을 때 반환받는 데이터
+                    alert("성공");
+                    //div 태그 전체를 Ajax02.html로 바꾸기
+                    $("div").html(result);
+                },
+                error: function(){ // 통신이 실패했을 때 수행할 메소드
+                    alert("failed..")
+                }
+            })
+            
+        }
+    </script>
+
+</body>
+</html>

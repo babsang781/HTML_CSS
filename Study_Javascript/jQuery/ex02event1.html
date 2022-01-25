@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>jQuery Click</h1>
+    <h2>jQuery2 Click</h2>
+    <h3>jQuery3 Click</h3>
+    <h1>This 키워드</h1>
+
+    <script>
+        $("h1").on("mouseover",function (){
+            $("h1").css("color", "blue");
+            $("h1").css("background-color", "yellow");
+         
+        });
+    //   클릭하면 색이 돌아오게 하기
+    //     $("h1").on("click",function (){
+    //         $("h1").css("color", "black");
+    //     });
+    //그것보다는 마우스 벗어나면 바로 돌아오는 게 낫지
+        // $("h1").on("mouseout",function (){
+        //     $("h1").css("color", "black");
+        // });
+        $("h1").on("click",function (){
+            $("h1").text("JavaScript with jQuery");
+            $("h1").css("color", "black");
+
+        });
+        $("h1").on("dblclick",function (){
+            $("h1").text("jQuery with JavaScript");
+            $("h1").css("color", "black");
+        });
+        
+        // 이벤트 한번에 적용, 객체 형태
+        $("h2").on({
+            "click": function (){
+                $("h2").text("jQuery with JavaScript"); 
+            },
+            "dblclick": function (){
+                $("h2").css("color","red"); 
+            }
+        });
+
+        //this --> 선택한 요소만 적용 되게 하느 기능
+        // 호출된 html 객체가 저장되는 변수(실행주체) 
+        //실행된 내용에 따라 this 에 적용되는 값이 자동으로 변함
+        // 사용자가 선택한 요소 하나만 지정이 되는 변수
+
+        //마우스로 클릭한 ㅇㅇ 그것만
+
+        $("h1").on({
+            click: function () {
+                $(this).text("jQuery with JaScript");
+            },
+            dblclick: function () {
+                $(this).css("color", "red");
+            },
+        });
+            
+        
+
+    </script>
+  </body>
+</html>

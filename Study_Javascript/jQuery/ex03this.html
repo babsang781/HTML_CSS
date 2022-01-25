@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>this 사용해보기</h1>
+    <h3>눌렀을 때, 나만 텍스트를 출력해주세요</h3>
+    <h3>눌렀을 때, 나만 텍스트를 출력해주세요</h3>
+    <h3>눌렀을 때, 나만 텍스트를 출력해주세요</h3>
+    <h3>눌렀을 때, 나만 텍스트를 출력해주세요</h3>
+    <button onclick="reset()">reset</button>
+    <script>
+      $("h3").css("background-color", "black");
+      $("h3").css("color", "yellow");
+
+      $("h3").on({
+        click: function () {
+          $(this).text("나만 클릭했네요!");
+        },
+        dblclick: function () {
+          $(this).css("color", "lightblue");
+        },
+      });
+
+      //   $("button").on({
+      //     click: function () {
+      //     }});
+      function reset() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

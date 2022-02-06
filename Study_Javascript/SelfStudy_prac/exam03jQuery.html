@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>ex03jQuery</title>
+</head>
+<body>
+	<!-- 임의의 그림 파일을 해당 경로를 만들어 저장함 -->
+	<img src="./img/img1.jpg" width="300px" id="pic" />
+	<button id="b1">이미지 변경</button>
+	<button id="b2">이미지 추가</button>
+	<img src="./img/img2.png" width="300px" id="pic2" style="display: none" />
+
+<!-- 제이쿼리 추가 -->
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<script>
+		// 이미지 변경 버튼과 이미지 추가 버튼 작성 및 활성화
+
+		// 기능의 현재 상태를 확인하기 위한 변수, 
+		//on/off 버튼 같은 것으로 이 변수의 값을 통해서 조건을 변화시킬 것임.
+		// boolean 형태의 변수를 선언.
+		let switch1 = false; // #b1:이미지 변경에 사용할 변수
+		let switch2 = false; // #b2 에 사용할 변수
+
+		//jQuery를 이용해 테그에 접근, .on('click', function(){ if(switch1==true){~~~~~} }); 형태로 작성 가능!
+		$('#b1').on('click', function() {
+			
+			// 이미지 변경 클릭 기능 구현
+			// () 안의 조건을 쉽게 하기 위한 switch 변수의 활용.
+			if (switch1 == false) {
+				$('#pic').attr('src', './img/img2.png').attr('width', '200px');
+				switch1 = true;  // 다른 조건에서 작동하게 하기 위해 switch의 값을 변경해줌
+				
+			} else {
+				$('#pic').attr('src', './img/img1.jpg').attr('width', '200px');
+				switch1 = false;
+			}
+		});
+
+		//
+		$('#b2').on('click', function() {
+
+			if (switch2 == false) {
+				$('#pic2').after('<img src="./img/img2.png" id="pic3" width="200px" style="display:block"/>');
+				$('#b2').html("이미지 삭제");  // 버튼을 다시 눌리면 이미지가 없어져야 하므로 버튼의 값을 변경해줌.
+				switch2 = true;
+				
+			} else {
+				$('#pic3').remove();
+				$('#b2').html("이미지 추가");  
+				switch2 = false;
+			}
+		});
+	</script>
+
+</body>
+</html>
